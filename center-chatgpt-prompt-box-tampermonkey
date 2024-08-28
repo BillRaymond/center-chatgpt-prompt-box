@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.2
 // @description  Moves the grandparent container of the ChatGPT message box to the center of the page, increases its size by 50%, and adds a gradient-filled rounded border one level down when focused
-// @author       YourName
+// @author       BillRaymond
 // @match        *://chatgpt.com/*
 // @grant        none
 // ==/UserScript==
