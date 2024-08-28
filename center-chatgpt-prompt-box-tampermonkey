@@ -1,0 +1,125 @@
+// ==UserScript==
+// @name         Center ChatGPT Message Box Grandparent Container with Size Increase and Gradient Border
+// @namespace    http://tampermonkey.net/
+// @version      1.2
+// @description  Moves the grandparent container of the ChatGPT message box to the center of the page, increases its size by 50%, and adds a gradient-filled rounded border one level down when focused
+// @author       YourName
+// @match        *://chatgpt.com/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    const originalStyles = new Map();
+
+    function moveToCenter(target) {
+        // Store the original styles
+        originalStyles.set(target, {
+            position: target.style.position,
+            top: target.style.top,
+            left: target.style.left,
+            transform: target.style.transform,
+            width: target.style.width,
+            height: target.style.height,
+        });
+
+        // Get the original dimensions
+        const originalWidth = target.offsetWidth;
+        const originalHeight = target.offsetHeight;
+
+        // Calculate the new dimensions
+        const newWidth = originalWidth * 1.5;
+
+        // Apply the styles to center and enlarge the container
+        target.style.position = 'fixed';
+        target.style.top = '50%';
+        target.style.left = '50%';
+        target.style.transform = 'translate(-50%, -50%)';
+        target.style.width = `${newWidth}px`;
+    }
+
+    function applyBorder(target) {
+        // Store the original styles
+        originalStyles.set(target, {
+            boxShadow: target.style.boxShadow,
+            borderRadius: target.style.borderRadius,
+            backgroundColor: target.style.backgroundColor
+        });
+
+        // Add a gradient border and fill inspired by the image
+        target.style.boxShadow = '0 0 8px 8px rgba(255, 255, 255, 0)'; // Transparent box-shadow to avoid affecting the border gradient
+        target.style.borderRadius = '26px'; // Rounded edges
+        target.style.border = '8px solid';
+        target.style.borderImage = 'linear-gradient(to right, #00c9ff, #92fe9d, #f9f47d, #f45dba, #405de6) 1'; // Gradient border inspired by the uploaded image
+        target.style.backgroundImage = 'linear-gradient(to right, #00c9ff, #92fe9d, #f9f47d, #f45dba, #405de6)'; // Matching background gradient
+    }
+
+    function resetPosition(target) {
+        if (originalStyles.has(target)) {
+            const original = originalStyles.get(target);
+            target.style.position = original.position;
+            target.style.top = original.top;
+            target.style.left = original.left;
+            target.style.transform = original.transform;
+            target.style.width = original.width;
+            target.style.height = original.height;
+            originalStyles.delete(target);
+        }
+    }
+
+    function resetBorder(target) {
+        if (originalStyles.has(target)) {
+            const original = originalStyles.get(target);
+            target.style.boxShadow = original.boxShadow;
+            target.style.borderRadius = original.borderRadius;
+            target.style.border = ''; // Remove the custom border
+            target.style.backgroundImage = ''; // Remove the gradient background
+            originalStyles.delete(target);
+        }
+    }
+
+    function handleFocus(event) {
+        const target = event.target;
+        const container = target.closest('form.w-full').parentElement.parentElement; // Targeting the container (two levels up)
+        const borderTarget = target.closest('form.w-full').parentElement; // Targeting the element one level down
+
+        if (container) {
+            moveToCenter(container);
+        }
+        if (borderTarget) {
+            applyBorder(borderTarget);
+        }
+    }
+
+    function handleBlur(event) {
+        const target = event.target;
+        const container = target.closest('form.w-full').parentElement.parentElement;
+        const borderTarget = target.closest('form.w-full').parentElement;
+
+        if (container) {
+            resetPosition(container);
+        }
+        if (borderTarget) {
+            resetBorder(borderTarget);
+        }
+    }
+
+    // Add event listeners to the input box
+    document.addEventListener('focusin', (event) => {
+        const target = event.target;
+
+        if (target.tagName === 'TEXTAREA' || target.tagName === 'INPUT') {
+            handleFocus(event);
+        }
+    });
+
+    document.addEventListener('focusout', (event) => {
+        const target = event.target;
+
+        if (target.tagName === 'TEXTAREA' || target.tagName === 'INPUT') {
+            handleBlur(event);
+        }
+    });
+
+})();
