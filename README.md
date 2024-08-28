@@ -4,7 +4,9 @@
 ![](chatgpt-center-chatbox-demo.gif)
 
 ## Purpose
-The primary way to get things done with ChatGPT is with a prompt. If you are training or doing prompts over a live or recorded feed, there is a strong likelihood that subtitles, ads, or other UI elements will appear in that lower quadrant of the screen. There are many solutions to fixing this, like zooming in and out, resizing your browser, etc. But why not just put the prompt in the center of the page with a nice visual to draw people's attention? That is the purpose of this utility.
+If you deliver ChatGPT training videos (live or recorded) and your browser is full-screen, you know, subtitles or ads usually overlay the prompt.
+
+The solution? Move the prompt to the center of the screen!
 
 ## Installation
 1. Install the [Tampermonkey](https://www.tampermonkey.net) extension for your browser of choice (I only tested Safari on the Mac)
