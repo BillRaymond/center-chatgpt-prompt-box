@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Center ChatGPT Prompt
-// @namespace    http://tampermonkey.net/
-// @version      1.3
+// @namespace    https://github.com/BillRaymond/center-chatgpt-prompt-box
+// @version      1.4
 // @description  Center the ChatGPT prompt box and add a gradient border
 // @author       BillRaymond
 // @match        *://chatgpt.com/*
