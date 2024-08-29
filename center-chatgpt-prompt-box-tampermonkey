@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Center and brand ChatGPT Prompt Box
 // @namespace    https://github.com/BillRaymond/center-chatgpt-prompt-box
-// @version      0.1
+// @version      0.12
 // @description  Center and brand ChatGPT Prompt Box
 // @author       BillRaymond
 // @match        *://chatgpt.com/*
@@ -9,11 +9,11 @@
 // ==/UserScript==
 
 // Advanced summary:
-// Moves the grandparent container of the ChatGPT message
-// box to the center of the page, increases its size by 50%,
-// and adds a gradient-filled rounded border
-// one level down when focused
-// When unfocused, return ChatGPT prompt to its original location.
+// Moves the prompt box to the center of the page
+// Increases the width of the prompt box
+// Adds a background to make the prompt box stand out
+// Adds some branding text under the prompt box
+// When the prompt box loses focus, it resets to the ChatGPT UI
 
 (function() {
     'use strict';
