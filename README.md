@@ -20,14 +20,21 @@ The solution? Move the prompt to the center of the screen!
 3. Type your prompt and press enter/return on your keyboard (you can even use shift-enter for longer prompts!)
 4. If the prompt box is in your way, select an area outside the box, and it will go back down to the bottom of the page where it exists by default
 
-## Limitations
-At the moment, the following functionality does not work. If you have some ideas to 
+## Known limitations
+At the moment, the following functionality does not work, mostly because I did not have the time to figure it out:
+
+1. Pressing the button to attach a file will revert to the standard ChatGPT interface. The workaround is to drag and drop files into the chat space.
+2. Pressing the send button (the up arrow) will return you to the standard ChatGPT interface. Instead, press the return or enter key on your keyboard.
 
 ## License
-This code is free to use and can be distributed by anyone at no cost. 
+This code is free to use. 
 If you do share the code, I would appreciate a mention:
 * @BillRaymond
 * https://github.com/BillRaymond
 * https://github.com/BillRaymond/center-chatgpt-prompt-box
 
-If you make improvements or variations and feel like sharing them, please send a PR. If the code runs and I think it is helpful for the scenarios I need it for, I will give you an honorable mention.
+## PRs
+If you make improvements or variations and feel like sharing them, please send a standard PR letting me know what changes you made and why.
+
+## Liability
+I claim no liability for this code or its supporting tools. When using ChatGPT, your browser will run a third-party extension (Tampermonkey) with which I have no affiliation. Tampermonkey then injects code into your browser using the content the browser is displaying. 
