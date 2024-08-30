@@ -1,8 +1,6 @@
 # Center and stylize the ChatGPT prompt box
 ⭐️ This repo, if you find it useful!
 
-![](chatgpt-center-chatbox-demo.gif)
-
 ## Purpose
 If you deliver ChatGPT training videos (live or recorded) and your browser is full-screen, you know, subtitles or ads usually overlay the prompt.
 
