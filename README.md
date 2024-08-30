@@ -6,6 +6,8 @@ If you deliver ChatGPT training videos (live or recorded) and your browser is fu
 
 The solution? Move the prompt to the center of the screen!
 
+![](chatgpt-center-chatbox-demo.gif)
+
 ## Installation
 1. Install the [Tampermonkey](https://www.tampermonkey.net) extension for your browser of choice (I only tested Safari on the Mac)
 2. With your browser running, run Tampermonkey and create a new script
