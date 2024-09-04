@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Center and brand ChatGPT Prompt Box
 // @namespace    https://github.com/BillRaymond/center-chatgpt-prompt-box
-// @version      0.12
+// @version      0.13
 // @description  Center and brand ChatGPT Prompt Box
 // @author       BillRaymond
 // @match        *://chatgpt.com/*
@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 // Advanced summary:
-// Moves the prompt box to the center of the page
+// Moves the ChatGPT prompt box to the center of the page
 // Increases the width of the prompt box
 // Adds a background to make the prompt box stand out
 // Adds some branding text under the prompt box
