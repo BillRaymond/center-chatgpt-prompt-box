@@ -51,15 +51,14 @@ Follow the steps in the previous section, and the code will run again.
 ## Known limitations/workarounds
 At the moment, the following functionality does not work, mostly because I did not have the time to figure it out:
 
-**Attach button does not work**
-_Issue_: When the prompt bar is selected and you press the `attach` (paperclip) icon, the prompt box is restored to its default location.
-_Workaround_: Drag and drop files into the chat space.
+* _Issue_: When the prompt bar is selected and you press the `attach` (paperclip) icon, the prompt box is restored to its default location.
+* _Workaround_: Drag and drop files into the chat space.
 
-_Issue_: When you press the send (up arrow) button, the prompt box is restored to its default location.
-_Workaround_: Press your keyboard's return (or enter) key.
+* _Issue_: When you press the send (up arrow) button, the prompt box is restored to its default location.
+* _Workaround_: Press your keyboard's return (or enter) key.
 
-_Issue_: You want to move the prompt box to its original location so you can read the content on the page.
-_Workaround_: Select anywhere on the page, and the prompt box will return to its default location.
+* _Issue_: You want to move the prompt box to its original location so you can read the content on the page.
+* _Workaround_: Select anywhere on the page, and the prompt box will return to its default location.
 
 ## Delete the code
 If you'd like to remove Tampermonkey, you can find the instructions on their [site](https://www.tampermonkey.net).
