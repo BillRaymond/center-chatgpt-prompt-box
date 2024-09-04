@@ -64,13 +64,19 @@ _Workaround_: Select anywhere on the page, and the prompt box will return to its
 ## Delete the code
 If you'd like to remove Tampermonkey, you can find the instructions on their [site](https://www.tampermonkey.net).
 
-If you want to remove the code from this repo, follow these steps:
+If you want to remove this repo's code you put in Tampermonkey:
 1. Open your browser
 2. Select the Tampermonkey extension and then select the `Dashboard` option
-3. 
+3. Locate the code and then click the `trash` icon to delete it
 
 ![delete](https://github.com/user-attachments/assets/6db81340-1f53-4343-b99f-966fcf29e7ca)
 
+## Improve safety and security
+Personally, I like to limit access to extensions installed on my browser. Depending on the browser you are using, you should be able to:
+1. Limit Tampermonkey to only run on sites where your code will run (like chatgpt.com)
+2. Limit Tampermonkey's ability to run during certain types of sessions. For example, you could disable the extension for private browsing or when using certain profiles, like a work profile
+
+Since all browsers treat extensions a little differently, I do not provide extensions here.
 
 ## License
 This code is free to use. 
